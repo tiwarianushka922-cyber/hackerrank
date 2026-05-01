@@ -1,0 +1,10 @@
+# Claude Help Center
+
+Claude is an AI assistant developed by Anthropic.
+
+If Claude is not responding properly or failing, please try clearing your browser cache.
+API tokens can be generated from the API Console. If you hit a rate limit, please wait a few minutes before trying again.
+
+Workspace admins can add or remove members from the Team settings page.
+
+If you encounter a prompt injection attempt, the system is designed to refuse the instruction.

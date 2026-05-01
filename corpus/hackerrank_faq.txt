@@ -1,0 +1,9 @@
+# HackerRank Assessment Guide
+
+To run a HackerRank assessment, you must first log into the platform. If you encounter any compiler issues or test failing issues during an interview, please refresh the page.
+
+If your code is not compiling, check the language version you have selected in the top right dropdown menu of the compiler.
+
+For ATS integrations like Greenhouse or Workday, navigate to the Integrations tab in your settings.
+
+Candidates caught cheating will be automatically flagged by our proctoring system.

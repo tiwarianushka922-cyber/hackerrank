@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Support Triage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <main class="glass-container">
+        <header>
+            <h1>AI Support Triage</h1>
+            <p>Upload your CSV to automatically classify and resolve support tickets.</p>
+        </header>
+
+        <section class="upload-section">
+            <div id="drop-zone" class="drop-zone">
+                <div class="drop-content">
+                    <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                    <p>Drag & Drop your <strong>support_tickets.csv</strong> here</p>
+                    <p class="text-sm text-gray">or click to browse files</p>
+                </div>
+                <input type="file" id="file-input" accept=".csv" hidden>
+            </div>
+            <button id="process-btn" class="btn primary-btn" disabled>Process Tickets</button>
+        </section>
+
+        <section id="results-section" class="results-section hidden">
+            <div class="results-header">
+                <h2>Triage Results</h2>
+                <div class="stats" id="stats-container"></div>
+            </div>
+            
+            <div class="table-container">
+                <table id="results-table">
+                    <thead>
+                        <tr>
+                            <th>Ticket ID</th>
+                            <th>Product Area</th>
+                            <th>Decision</th>
+                            <th>Response Snippet</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Rows will be dynamically injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <div id="loading-overlay" class="hidden">
+            <div class="spinner"></div>
+            <p>Processing tickets with AI...</p>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
